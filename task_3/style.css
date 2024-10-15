@@ -1,0 +1,124 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: lightblue;
+    width: 200px;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+#main {
+    margin-left: 250px;
+    padding: 20px;
+    background: lightgray;
+    min-height: 100vh;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+.flexbox-layout {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.flexbox-layout .box {
+    background: #f4f4f4;
+    padding: 20px;
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+
+
+/* untuk mobile */
+@media (max-width: 600px) {
+    nav {
+        position: static;
+        width: 100%;
+    }
+
+    #main {
+        margin-left: 0;
+    }
+
+    .flexbox-layout {
+        flex-direction: column;
+    }
+
+    .flexbox-layout .box {
+        margin: 10px 0;
+    }
+
+    footer {
+        position: static;
+    }
+}
+
+/* untuk tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+    nav {
+        width: 150px;
+    }
+
+    #main {
+        margin-left: 170px;
+    }
+
+    .flexbox-layout {
+        flex-direction: row;
+    }
+}
+
+/* For laptops and larger screens */
+@media (min-width: 1025px) {
+    nav {
+        width: 250px;
+    }
+
+    #main {
+        margin-left: 270px;
+    }
+}
